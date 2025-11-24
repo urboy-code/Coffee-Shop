@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const authRoutes = require('./routes/auth.routes')
+const authRoutes = require('./routes/auth.routes');
 
 // Routes
 app.get('/', (req, res) => {
@@ -35,7 +35,7 @@ app.get('/test-db', async (req, res) => {
 });
 
 // Auth Routes
-app.use('/api/v1/auth', authRoutes)
+app.use('/api/v1/auth', authRoutes);
 
 // Server Start
 app.listen(PORT, () => {

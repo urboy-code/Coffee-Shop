@@ -1,16 +1,16 @@
 services:
   postgres-coffee:
     image: postgres:15-alpine
-    container_name: toko_kopi_db
+    container_name: kopi_db
     restart: unless-stopped
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: toko_kopi
+      POSTGRES_DB: kopi
     ports:
-      - "5433:5433"
+      - "5438:5432"
     volumes:
-      - toko_kopi_data:/var/lib/postgresql/data
+      - kopi_data:/var/lib/postgresql/data
 
 volumes:
-  toko_kopi_data:
+  kopi_data:
