@@ -2,7 +2,7 @@ const pool = require('../config/db');
 
 exports.getAllProducts = async (req, res) => {
   try {
-    const result = 'SELECT * FROM products';
+    const result = await pool.query('SELECT * FROM products');
     res.json({
       message: 'Daftar produk berhasil diambil',
       data: result.rows,
