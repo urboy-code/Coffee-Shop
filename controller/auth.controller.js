@@ -7,7 +7,7 @@ exports.register = async (req, res) => {
 
   if (!name || !email || !password) {
     return res.status(400).json({
-      message: 'Name, Emial, and Password must be fill!',
+      message: 'Name, Email, and Password must be fill!',
     });
   }
 
