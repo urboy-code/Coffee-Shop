@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const authRoutes = require('./routes/auth.routes');
 const productRoutes = require('./routes/product.routes');
+const cartRoutes = require('./routes/cart.routes');
 const authenticateToken = require('./src/middleware/authMiddleware');
 
 // Routes
@@ -41,6 +42,9 @@ app.use('/api/v1/auth', authRoutes);
 
 // Product Routes
 app.use('/api/v1/products', productRoutes);
+
+// Cart Routes
+app.use('/api/v1/cart', cartRoutes);
 
 // Server Start
 app.listen(PORT, () => {
